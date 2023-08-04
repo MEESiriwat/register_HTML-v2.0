@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIRITEA</title>
+</head>
+<link rel="stylesheet" href="curriculum.css">
+<body>
+    <nav>
+        <div class="namepage">
+            <img src="image/vec-logo.png" alt="logo_icon">
+        </div>
+        <ul>
+            <li>
+                <a href="index1.html">หน้าแรก</a>
+            </li>
+            <li>
+                <a href="curriculum.html">หลักสูตรที่เปิดสอน</a>
+            </li>
+            <li>
+                <a href="index2.html">สมัครเรียน</a>
+            </li>
+            <li>
+                <a href="formcheck.html">ตรวจสอบผลการสมัคร</a>
+            </li>
+            <li>
+                <a href="contact.html">ติดต่อสอบถาม</a>
+            </li>
+        </ul>
+    </nav>
+    <tr>
+        <td class="box-content">
+            <div class="text-topic fgreen">หลักสูตรที่เปิดรับสมัคร (ปีการศึกษา 1/2566)</div>
+
+            <div style="margin-top:15px;">
+                <table class="adm-detail" width="100%">
+                    <tbody>
+                        <tr>
+                            <td width="180" class="label">รอบที่สมัคร</td>
+                            <td>
+                                <select id="stdTimeS" name="stdTimeS">
+                                    <option value="0">รอบโควต้า</option>
+                                    <option value="1">รอบปกติ</option>
+
+                                    <option value="2">รอบเพิ่มเติม</option>
+
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">ประเภทสถานศึกษา</td>
+                            <td>
+                                <select id="stdTypeIdS" name="stdTypeIdS" style="width:200px;" onchange="getStuDepts()">
+                                    <option value="">- เลือกทั้งหมด -</option>
+                                    <option value="Y">รัฐบาล</option>
+                                    <option value="X">เอกชน</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">จังหวัด</td>
+                            <td>
+                                <select id="stdProvIdS" name="stdProvIdS" style="width:200px;" onchange="getStuDepts()">
+                                    <option value="">- เลือกทั้งหมด -</option>
+                                    <option value="64">กระบี่</option>
+                                    <option value="1">กรุงเทพมหานคร</option>
+                                    <option value="56">กาญจนบุรี</option>
+                                    <option value="34">กาฬสินธุ์</option>
+                                    <option value="49">กำแพงเพชร</option>
+                                    <option value="28">ขอนแก่น</option>
+                                    <option value="13">จันทบุรี</option>
+                                    <option value="15">ฉะเชิงเทรา</option>
+                                    <option value="11">ชลบุรี</option>
+                                    <option value="9">ชัยนาท</option>
+                                    <option value="25">ชัยภูมิ</option>
+                                    <option value="69">ชุมพร</option>
+                                    <option value="45">เชียงราย</option>
+                                    <option value="38">เชียงใหม่</option>
+                                    <option value="72">ตรัง</option>
+                                    <option value="14">ตราด</option>
+                                    <option value="50">ตาก</option>
+                                    <option value="17">นครนายก</option>
+                                    <option value="58">นครปฐม</option>
+                                    <option value="36">นครพนม</option>
+                                    <option value="19">นครราชสีมา</option>
+                                    <option value="63">นครศรีธรรมราช</option>
+                                    <option value="47">นครสวรรค์</option>
+                                    <option value="3">นนทบุรี</option>
+                                    <option value="76">นราธิวาส</option>
+                                    <option value="43">น่าน</option>
+                                    <option value="77">บึงกาฬ</option>
+                                    <option value="20">บุรีรัมย์</option>
+                                    <option value="4">ปทุมธานี</option>
+                                    <option value="62">ประจวบคีรีขันธ์</option>
+                                    <option value="16">ปราจีนบุรี</option>
+                                    <option value="74">ปัตตานี</option>
+                                    <option value="5">พระนครศรีอยุธยา</option>
+                                    <option value="44">พะเยา</option>
+                                    <option value="65">พังงา</option>
+                                    <option value="73">พัทลุง</option>
+                                    <option value="53">พิจิตร</option>
+                                    <option value="52">พิษณุโลก</option>
+                                    <option value="61">เพชรบุรี</option>
+                                    <option value="54">เพชรบูรณ์</option>
+                                    <option value="42">แพร่</option>
+                                    <option value="66">ภูเก็ต</option>
+                                    <option value="32">มหาสารคาม</option>
+                                    <option value="37">มุกดาหาร</option>
+                                    <option value="46">แม่ฮ่องสอน</option>
+                                    <option value="24">ยโสธร</option>
+                                    <option value="75">ยะลา</option>
+                                    <option value="33">ร้อยเอ็ด</option>
+                                    <option value="68">ระนอง</option>
+                                    <option value="12">ระยอง</option>
+                                    <option value="55">ราชบุรี</option>
+                                    <option value="7">ลพบุรี</option>
+                                    <option value="40">ลำปาง</option>
+                                    <option value="39">ลำพูน</option>
+                                    <option value="30">เลย</option>
+                                    <option value="22">ศรีสะเกษ</option>
+                                    <option value="35">สกลนคร</option>
+                                    <option value="70">สงขลา</option>
+                                    <option value="71">สตูล</option>
+                                    <option value="2">สมุทรปราการ</option>
+                                    <option value="60">สมุทรสงคราม</option>
+                                    <option value="59">สมุทรสาคร</option>
+                                    <option value="18">สระแก้ว</option>
+                                    <option value="10">สระบุรี</option>
+                                    <option value="8">สิงห์บุรี</option>
+                                    <option value="51">สุโขทัย</option>
+                                    <option value="57">สุพรรณบุรี</option>
+                                    <option value="67">สุราษฎร์ธานี</option>
+                                    <option value="21">สุรินทร์</option>
+                                    <option value="31">หนองคาย</option>
+                                    <option value="27">หนองบัวลำภู</option>
+                                    <option value="6">อ่างทอง</option>
+                                    <option value="26">อำนาจเจริญ</option>
+                                    <option value="29">อุดรธานี</option>
+                                    <option value="41">อุตรดิตถ์</option>
+                                    <option value="48">อุทัยธานี</option>
+                                    <option value="23">อุบลราชธานี</option>
+
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">สถานศึกษา</td>
+                            <td>
+                                <select id="stdDeptIdS" name="stdDeptIdS" style="width:200px;">
+                                    <option value="">- เลือกทั้งหมด -</option>
+
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">ระดับการศึกษา</td>
+                            <td>
+                                <select id="stdDlIdS" name="stdDlIdS" style="width:200px;">
+                                    <option value="">- เลือกทั้งหมด -</option>
+                                    <option value="10">ปวช.</option>
+                                    <option value="30">ปวส.</option>
+                                    <option value="40">ทล.บ.</option>
+                                    <option value="20">ปทส.</option>
+
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">ประเภทผู้เรียน</td>
+                            <td>
+                                <select id="stdESysIdS" name="stdESysIdS" style="width:200px;">
+                                    <option value="">- เลือกทั้งหมด -</option>
+                                    <option value="11">พิการ</option>
+                                    <option value="1">ปกติ</option>
+                                    <option value="12">ผู้เข้าเรียน</option>
+                                    <option value="2">ทวิภาคี</option>
+                                    <option value="3">ด้อยโอกาส</option>
+                                    <option value="4">เทียบโอน</option>
+                                    <option value="5">สะสม</option>
+                                    <option value="6">เกษตรปฏิรูป</option>
+                                    <option value="7">สมทบ</option>
+                                    <option value="8">ม.6 / ต่างสาขา</option>
+                                    <option value="9">อศ.กช</option>
+
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">สาขาวิชา</td>
+                            <td>
+                                <input type="text" id="stdMinorIdS" name="stdMinorIdS" size="30">
+                                <!-- <span style="color:blue;">ชื่อสาขางาน</span> -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>
+                                <button type="button" onclick="doSearchPage('','')"
+                                    class="btn btn-primary">ค้นหา</button>
+                                <button type="button" onclick="location.href='/web/student.htm?mode=curriculum'"
+                                    class="btn">เริ่มใหม่</button>
+                                <button id="bt_plan_detail" style="visibility:hidden;"></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+
+            <table id="tbresult_stdplan" class="formatPaging">
+                <thead>
+                    <tr>
+                        <th width="50">ลำดับ</th>
+                        <th>จังหวัด</th>
+                        <th>สถานศึกษา</th>
+                        <th width="80">ระดับการศึกษา</th>
+                        <th width="140">ประเภทวิชา</th>
+                        <th>สาขาวิชา</th>
+                        <th>สาขางาน</th>
+                        <th>รูปแบบ</th>
+                        <th>ประเภท</th>
+                        <th width="80">เปิดรับ/<br>สมัคร</th>
+                        <th width="70">รายละเอียด</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="10" class="no-result">กรุณาเลือกรายการที่ต้องการค้นหา.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+        </td>
+    </tr>
+</body>
+
+</html>

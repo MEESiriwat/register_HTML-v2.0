@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+</head>
+<body>
+    <h1>กรอกข้อมูลผู้สมัคร</h1>
+    <p style="font-size: 150%;">ข้อมูลผู้สมัคร <p style="color: red;">(** ระบุ คำนำหน้าชื่อ ชื่อ นามสกุล)</p></p>
+    <form action="">
+        <div class="titlename">
+            คำนำหน้าชื่อ &nbsp;
+            <input class="form-check-input" type="radio" name="titlename" value="นาย"> นาย  &nbsp;
+            <input class="form-check-input" type="radio" name="titlename" value="นาง"> นาง    &nbsp;
+            <input class="form-check-input" type="radio" name="titlename" value="นางสาว"> นางสาว    &nbsp;
+            <input class="form-check-input" type="radio" name="titlename" value="อื่นๆ"> อื่นๆ   <input type="text" name="titlenameOther">
+          </div>
+          <div class="name">
+            <label  class="name_label">ชื่อ</label>
+            <div class="fname">
+              <input type="text" name="firstnameTH" class="form-control" required placeholder="ชื่อ(ภาษาไทย)">
+            </div>
+            <label  class="sname">สกุล</label>
+            <div class="sname_label">
+              <input type="text" name="lastnameTH" class="form-control" required placeholder="สกุล(ภาษาไทย)">
+            </div>
+          </div>
+        <a href="register3.html">
+            <button type="submit" class="btn btn-primary">ตรวจสอบช้อมูล</button>
+        </a>
+    </form>
+</body>
+</html>
